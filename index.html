@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning how to learn</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+    <!-- 
+      Must be corrected:
+        1. please, remove all unnecessary css properties as display: flex. It should be fixed
+        for all elements on the page, use flex container only when it's really necessary.
+
+        For now page looks like this because of inappropriate usage of flexbox:
+        https://paste.pics/84EL2 very strange...this looked perfect in my chrome browser and functioned fine.
+
+     +   2. Also there are some troubles with z-index. I can't click the link in the header because
+        it's under the page block. Please, fix it for all elements on the page
+     -->
+     <img src="images/logo.png" 
+          alt="Practicum logo" 
+          class="logo logo_place_header">
+      <!-- 
+  +        Must be corrected:
+          place isn't an element of logo, it's a modifier, so use this structure
+          to define modifiers:
+          block block_modifier_value
+          block__element block__element_modifier_value
+       -->
+      <!-- Must be corrected: to insert images in html   
+      +   img tag is used -->
+      <h1 class="header__title">Learning How to Learn</h1>
+        <!-- 
+        +  Must be corrected: no need to create redudant div wrapper for this element
+         -->
+      
+      <!-- 
+      +  Must be corrected:
+          1. no need to create redudant div wrapper for this element
+          2. br tag is redundant, it does nothing
+          3. This element should have coords according to the brief
+      -->
+      <p class="header__subtitle">The most effective, cutting-edge learning techniques that you can apply to your daily life. <a class="more" href="#">Learn more →</a></p>
+      
+      <div class="header__square-pic"></div>
+      <!-- 
+        Must be corrected: this element should have the class header__square-pic
+       -->
+      <img class="header__main-illustration"
+          src="images/on_the_edge.png" alt="woman standing on rock" />
+      <!-- 
+        Good job: alt attr contains descriptive info, this img is accessible for people
+        who use screenreaders
+       -->
+      <!-- 
+      +  Must be corrected:
+          1. this element should have the class      header__main-illustration
+          2. When absolute position is applied, the element positions relative to the first parent
+          with position not set to static. If such element is absent, so the element positions
+          relative to body. Usually position relative is used in this case. Please, apply position
+          relative for header block.
+          
+          For more info: https://developer.mozilla.org/en-US/docs/Web/CSS/position
+       -->
+    </header>
+    <main class="content">
+      <section class="description">
+        <div class="two-columns">
+          <!-- 
+          +  Must be corrected:
+              1. no need to create redudant div wrapper for this element
+              2. it's better to use h2 tag for this element because it's a heading of this section
+          -->
+          <h2 class="two-columns__brief">The main problem with education</h2>
+
+          <div class="two-columns__main-text">
+            <p class="two-columns__paragraph">
+            <!-- 
+           +   Must be corrected:
+                this element should have the class two-columns__paragraph
+                please, fix it for all elements in this section
+             -->
+              Whether it's at school or university, the one thing no one ever teaches you is how to teach yourself. All you actually do is memorize information in order to regurgitate when you take the test. You get drilled on how to solve specific exercises so that while you know exactly what you need to do when exam time comes around, do you truly understand the
+              subject material? All you've really learned is how to pass that one test. Once that test is over, the information in your head has outlived its usefulness.
+            </p>
+
+            <p class="two-columns__paragraph">
+              <span class="two-columns__span-accent">Conclusion:</span> 
+              <!-- 
+              +  Must be corrected: this element should have the class two-columns__span-accent
+              -->
+              Knowing how to study is absolutely essential, but for some reason, this point is too often overlooked. So, what can we do to remedy this?
+            </p>
+            
+            <p class="two-columns__paragraph">
+              There are certain techniques and exercises that can be applied to the learning process to help make it more efficient
+              and engaging. This is exactly what we do at Practicum.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h2 class="section__title">Facts and figures</h2>
+        <!-- +
+          Must be corrected: this element should have the class section-title
+         -->
+        <!-- Good job: correct level of heading is choosen -->
+        <p class="section__subtitle">On learning and the brain</p>
+        <!-- 
+          Must be corrected: this element should have the class section-subtitle
+        -->
+        <!-- +
+          Could be better:
+            Spec requires to use p tag for subtitles
+
+            For more info: https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines
+         -->
+        <div class="table">
+          
+          <!-- +
+            Must be corrected: redudant wrapper according to the brief, please, remove
+            -->
+          <div class="table__cell">
+            <h3 class="table__heading">86 billion</h3>
+            <p class="table__text">The number of neurons in the human brain</p>
+          </div>
+          <div class="table__cell">
+            <h3 class="table__heading">2.1 billion</h3>
+            <!-- +
+              Must be corrected:
+                1. h3 tag should be opened with h3 tag, not h4. To check the validity of html code,
+                    please, use validator: https://validator.w3.org/nu/#textarea
+                2. It's better to stick to heading structure, so 
+                  h1 is the top level title of a page
+                  h2 is the heading for sections
+                  h3 is used after h2 and usually it's the title of items inside sections(like here)
+
+                Please, fix it for all headings in this section
+                For more info:
+                  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
+                  https://www.nomensa.com/blog/2017/how-structure-headings-web-accessibility
+              -->
+            <p class="table__text">The number of adults with low reading proficiency</p><p class="table__text">World Bank, 2017</p>
+            <!--
+              Could be better: it's good practice to add line break before tags for nice formatting  -->
+          </div>
+          <div class="table__cell">
+            <h3 class="table__heading">1,000 terabytes</h3>
+            <p class="table__text">Human information storage capacity</p>
+          </div>
+          <div class="table__cell">
+            <h3 class="table__heading">500 trillion</h4>
+            <p class="table__text">The number of nerve synapses responsible for learning in an adult human</p>
+          </div>
+        <!-- +
+          Must be corrected: redudant wrapper according to the brief
+        -->
+          <div class="table__cell">
+            <h3 class="table__heading">420 Million</h3>
+            <p class="table__text">The number of adults under 25 with insufficient education for finding employment<p><p class="table__text">World Bank, 2017</p>
+          </div>
+          <div class="table__cell">
+            <h3 class="table__heading">17 - 20 years old</h3>
+            <p class="table__text">Peak learning age</p>
+          </div>
+          <div class="table__cell">
+            <h3 class="table__heading">1885</h3>
+            <p class="table__text">Development of the forgetting curve</p>
+          </div>
+          <div class="table__cell">
+            <h3 class="table__heading">1897</h3>
+            <p class="table__text">Publication of Ivan Pavlov's research on classical conditioning</p>
+          </div>
+        
+        </div>
+      </section>
+
+      <section class="feynman">
+        <h2 class="feynman__title">The Feynman Technique</h2>
+        <p class="feynman__subtitle">Learn without forgetting.</p>
+        <!-- +
+          Could be better:
+            Spec requires to use p tag for subtitles
+
+            For more info: https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines
+        -->
+        <!-- 
+          Must be corrected: font-weight should be normal, not bold. Please, fix css properties for
+          all elements on the page
+         -->
+        <a class="feynman__link" href="#">More →</a>
+        <!-- +
+          Must be corrected:
+            1. No need to create redundant p wrapper for the link
+            2. Also this link doesn't work because it doesn't contain any text(text should be inside)
+            3. It shouldn't be in uppercase
+            4. Arrow is missed
+            5. top coordinate is missed for this element. It's not a good idea to use paddings instead of
+            coords for absolute-positioned elements
+        -->
+      </section>
+      
+      <section class="kaufman">
+        <!--
+          Must be corrected:
+            this section should have the class kaufman
+            Please, fix all the classes in this section according to the brief
+        -->
+        <div class="kaufman__triangle"></div>
+        <!--
+          Must be corrected:
+            1. this element should have the class kaufman__triangle
+            2. top coordinate is missed for this element. It's not a good idea to use paddings instead of
+            coords for absolute-posiitoned elements
+            3. This element is above the footer, it should be fixed(z-index issue)
+        -->
+        <h2 class="section__title kaufman__title_theme_dark">Ten principles of rapid skill acquisition</h2>
+        <p class="section__subtitle kaufman__subtitle_theme_dark">by Josh Kaufman</p>
+        <!-- +
+          Could be better:
+            Spec requires to use p tag for subtitles
+
+            For more info: https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines
+        -->
+        <div class="table">
+          
+        <!-- +
+          Must be corrected: redudant wrapper according to the brief
+        -->
+          <div class="table__cell table__cell_theme_dark">
+          <!-- Good job: correct modifier usage -->
+            <h3 class="table__heading">1</h3>
+            <!-- 
+              Must be corrected:
+                1. it's better to pick h3 for this titles after fixing subtitle tag
+                2. This element should have the modifier according to the brief. Should be fixed for
+                all elements in this section
+              -->
+            <p class="table__text">Choose a lovable project.</p>
+          </div>
+          <div class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading">2</h3>
+            <p class="table__text">Focus your energy on one skill at a time.</p>
+          </div>
+          <div class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading">3</h3>
+            <p class="table__text">Define your target performance level.</p>
+          </div>
+          <div class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading">4</h3>
+            <p class="table__text">Deconstruct the skill into sub-skills.</p>
+          </div>
+          <div class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading">5</h3>
+            <p class="table__text">Obtain critical tools.</p>
+          </div>
+        <!-- +
+          Must be corrected: redudant wrapper according to the brief
+        -->
+          <div class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading">6</h3>
+            <p class="table__text">Eliminate barriers to practice.</p>
+          </div>
+          <div class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading">7</h3>
+            <p class="table__text">Make dedicated time for practice.</p>
+          </div>
+          <div class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading">8</h3>
+            <p class="table__text">Create fast feedback loops.</p>
+          </div>
+          <div class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading">9</h3>
+            <p class="table__text">Practice by the clock in short bursts.</p>
+          </div>
+          <div class="table__cell table__cell_theme_dark">
+            <h3 class="table__heading">10</h3>
+            <p class="table__text">Emphasize quantity and speed.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"> 
+      <div class="footer__columns">
+        <div class="footer__column_content_copyright">
+        <!--
+          Must be corrected: worng class for this element. Fix all elements in this section
+        -->
+        
+          <img src="images/logo.png" 
+              alt="Practicum logo" 
+              class="logo logo_place_footer">
+        <!-- +
+          Must be corrected:
+            1. For imgs in html img tag is used
+            2. This element should have the classes logo logo_place_footer
+         -->
+          <!-- + Must be corrected: no need to create redundant div wrapper -->
+          <p class="footer__author">©2020. Lori Ortiz</p>
+          <!-- +
+            Must be corrected: redundant class according to the brief
+           -->
+        </div>
+      
+      <div class="footer__column_content_info">
+      <!--
+        Must be corrected: it's better to use div tag instead of nav,
+        usually this tag is used for major block of links
+
+        For more info: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
+      -->
+        <h3 class="footer__column-heading">About Practicum by Yandex</h3>
+        <ul>
+          <li><a class="footer__column-links" 
+                 href="#">Home page</a></li>
+          <li><a class="footer__column-links"
+                 href="#">Concept</a></li>
+          <li><a class="footer__column-links"
+                 href="#">Mentors</a></li>
+        </ul>
+      </div>
+      <div class="footer__column_content_social">
+      <!-- +
+        Must be corrected: it's better to use div tag instead of nav,
+        usually this tag is used for major block of links
+       -->
+        <h3 class="footer__column-heading">Social media</h3>
+        <ul>
+          <li> 
+            <a class="footer__column-links footer__social-icon"
+               href="#">Facebook</a>
+            <!-- 
+              Must be corrected: a social icon should be the part of a link according to the brief,
+              it should be clickable
+             -->
+          </li>
+          <li> 
+            <a class="footer__column-links footer__social-icon"
+               href="#">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+   
+    </div>
+  </body>
+</html>
+
+<!-- 
+  Hello! Glad to see that your work in progress. I really like:
+  1. Your flexbox skills
+  2. alt attributes contain descriptive content
+  3. Layout of many blocks are perfect
+
+  These important issues should be fixed:
+  1. The brief is the set of rules for us, so, please, follow it strictly. The main idea of this task
+  is to stick to the brief
+  2. Heading structure should be fixed
+  3. Typos should be fixed
+  4. All redundant wrappers and tags as br should be removed
+  5. For images in html img tag should be used
+  6. For text blocks p and h1-h6 tags should be used
+  7. Links should contain all necessary content
+  8. For absolute-positioned elements parent with position relative should be exist. Two dimensions
+  should be used to control the element position entirely(right and top, for instant)
+  9. z-index issue should be fixed for all elements on the page
+  10. All classes should be added according to the brief, all unnecessary classed should be removed
+  11. All redudant css properties that cause layout issues should be removed
+  12. All css properties from the brief should be added
+
+  Also, your work can be improved:
+  1. p tag should be used for subtitles
+  2. Nice formatting applied to the code
+ -->
