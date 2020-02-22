@@ -23,8 +23,8 @@
      -->
      <img src="images/logo.png" 
           alt="Practicum logo" 
-          class="logo logo_place_header">
-      <!-- 
+          class="logo logo__place_header">
+      <!-- +
   +        Must be corrected:
           place isn't an element of logo, it's a modifier, so use this structure
           to define modifiers:
@@ -47,7 +47,7 @@
       <p class="header__subtitle">The most effective, cutting-edge learning techniques that you can apply to your daily life. <a class="more" href="#">Learn more →</a></p>
       
       <div class="header__square-pic"></div>
-      <!-- 
+      <!-- +
         Must be corrected: this element should have the class header__square-pic
        -->
       <img class="header__main-illustration"
@@ -56,7 +56,7 @@
         Good job: alt attr contains descriptive info, this img is accessible for people
         who use screenreaders
        -->
-      <!-- 
+      <!-- +
       +  Must be corrected:
           1. this element should have the class      header__main-illustration
           2. When absolute position is applied, the element positions relative to the first parent
@@ -111,7 +111,7 @@
          -->
         <!-- Good job: correct level of heading is choosen -->
         <p class="section__subtitle">On learning and the brain</p>
-        <!-- 
+        <!-- +
           Must be corrected: this element should have the class section-subtitle
         -->
         <!-- +
@@ -189,7 +189,7 @@
 
             For more info: https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#subheadings-subtitles-alternative-titles-and-taglines
         -->
-        <!-- 
+        <!-- + font-weight is normal unless declared otherwise? By changing to <p> it looks normal to me.
           Must be corrected: font-weight should be normal, not bold. Please, fix css properties for
           all elements on the page
          -->
@@ -206,7 +206,7 @@
       </section>
       
       <section class="kaufman">
-        <!--
+        <!-- +
           Must be corrected:
             this section should have the class kaufman
             Please, fix all the classes in this section according to the brief
@@ -292,7 +292,7 @@
           Must be corrected: worng class for this element. Fix all elements in this section
         -->
         
-          <img src="images/logo.png" 
+          <img src="images/logo_white.png" 
               alt="Practicum logo" 
               class="logo logo_place_footer">
         <!-- +
@@ -315,14 +315,10 @@
         For more info: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
       -->
         <h3 class="footer__column-heading">About Practicum by Yandex</h3>
-        <ul>
-          <li><a class="footer__column-links" 
-                 href="#">Home page</a></li>
-          <li><a class="footer__column-links"
-                 href="#">Concept</a></li>
-          <li><a class="footer__column-links"
-                 href="#">Mentors</a></li>
-        </ul>
+        
+          <a href="#" class="footer__column-links">Home page</a>
+          <a href="#" class="footer__column-links">Concept</a>
+          <a href="#" class="footer__column-links">Mentors</a>
       </div>
       <div class="footer__column_content_social">
       <!-- +
@@ -330,20 +326,13 @@
         usually this tag is used for major block of links
        -->
         <h3 class="footer__column-heading">Social media</h3>
-        <ul>
-          <li> 
-            <a class="footer__column-links footer__social-icon"
-               href="#">Facebook</a>
-            <!-- 
-              Must be corrected: a social icon should be the part of a link according to the brief,
-              it should be clickable
-             -->
-          </li>
-          <li> 
-            <a class="footer__column-links footer__social-icon"
-               href="#">Instagram</a>
-          </li>
-        </ul>
+        <a href="#" class="footer__column-links">
+          <span class="footer__social-icon"><img src="images/facebook_white.svg"> Facebook</a>   <!-- 
+            Must be corrected: a social icon should be the part of a link according to the brief,
+            it should be clickable
+            -->
+        <a href="#" class="footer__column-links"> 
+          <span class="footer__social-icon" ><img src="images/instagram_white.svg"> Instagram</a>
       </div>
     </div>
   </footer>
