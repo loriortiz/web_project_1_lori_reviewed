@@ -7,15 +7,6 @@ body, h1, h2, h3, h4, p, a {
   box-sizing: border-box;
 }
 
-ul {
-  padding-left: 0;
-}
-
-.more {
-    color: #2f80ed;
-    text-decoration: none;
-}
-
 body {
   height: 100vh;
   position: relative;
@@ -81,8 +72,9 @@ body {
   z-index: 10;
 }
 
-.header__subtitle p {
-  margin-bottom: 30px;
+.header__subtitle-link {
+    color: #2f80ed;
+    text-decoration: none;
 }
 
 /* here we have two examples of selectors in order to remind you how to set styles for elements */
@@ -90,7 +82,7 @@ body {
   height: 568px;
   width: 568px;
   position: absolute;
-  top: 63px;
+  top: 64px;
   right: 0;
   background-color: #2f80ed;
   z-index: 0;
@@ -101,7 +93,7 @@ body {
   width: 755px;
   z-index: 1;
   position: absolute;
-  right: 0px;
+  right: 0;
   bottom: 0;
 }
 
@@ -112,8 +104,6 @@ body {
 
 }
 .description {
-  /* display: flex;
-  order: 1; */
   width: 80%;
   margin-top: 100px;
   align-self: center;
@@ -153,19 +143,12 @@ body {
 }
 
 .section {
-  /* display: flex;
-  order: 2; 
-  flex-direction: column; */
   width: 100%;
-  /* align-self: center;
-  align-items: center; */
-  /* margin: 0 auto; */
 }
 
 .section__title {
   margin: 100px auto 20px;
   width: 60%;
-  /* order: 1; */
   text-align: center;
   line-height: 69px;
   font-size: 60px;
@@ -173,10 +156,6 @@ body {
 }
 
 .section__subtitle {
-  /* margin-top:20px; */
-  /* display: inline-block;
-  width: 60%; */
-  /* order: 2; */
   text-align: center;
   line-height: 34px;
   font-size: 24px;
@@ -187,8 +166,6 @@ body {
   width: 1100px;
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
-  /* order: 3; */
   margin: 0 auto;
   justify-content: space-evenly;
   z-index: 1;
@@ -247,11 +224,9 @@ body {
 /* including elements with key-value modifiers */
 .kaufman {
   position: relative;
-  /* display: flex;
-  order: 4; */
   padding-bottom: 90px;
   color:white;
-  background-color: #000;
+  background-color: #1f1f1f;
   overflow: hidden;
   z-index: -1;
 }
@@ -279,9 +254,7 @@ body {
 }
 
 .footer {
-  /* display: flex;
-  order: 5; */
-  background-color: #000;
+  background-color: #1f1f1f;
   color: white;
   width: 100%;
   min-height: 350px;
@@ -291,9 +264,9 @@ body {
 .footer__columns {
   width: 90%;
   display: flex;
-  margin: 0 auto 60px;
+  margin: 0 auto 40px;
   justify-content: space-around;
-  
+  font-size: 18px;
 }
 
 .footer__column_content_copyright {
@@ -315,9 +288,8 @@ body {
 .footer__author {
   order: 2;
   color: #4f4f4f;
-  margin-bottom: 18px;
-  line-height: 20px;
-  font-size: 18px;
+  margin: 18px 0;
+  line-height: 25px;
 }
 
 .footer__column_content_info {
@@ -331,22 +303,22 @@ body {
   display: flex;
   order: 3;
   flex-flow: column nowrap;
-  font-size: 16px;
-
 }
 
 .footer__column-heading {
   line-height: 45px;
   font-size: 18px;
   font-weight: bold;
+  margin-bottom:20px;
 }
 
 .footer__column-links {
-  margin-top: 20px;
-  margin-left: 2px;
+  line-height: 30px;
+  margin-bottom:16px;
   list-style-type: none;
   text-decoration: none;
   color: #4f4f4f;
+  font-weight: normal;
 }
 
 .footer__social-icon {

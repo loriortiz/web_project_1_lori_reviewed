@@ -10,7 +10,7 @@
 <body>
   <div class="page">
     <header class="header">
-    <!-- 
+    <!-- +
       Must be corrected:
         1. please, remove all unnecessary css properties as display: flex. It should be fixed
         for all elements on the page, use flex container only when it's really necessary.
@@ -44,7 +44,7 @@
           2. br tag is redundant, it does nothing
           3. This element should have coords according to the brief
       -->
-      <p class="header__subtitle">The most effective, cutting-edge learning techniques that you can apply to your daily life. <a class="more" href="#">Learn more →</a></p>
+      <p class="header__subtitle">The most effective, cutting-edge learning techniques that you can apply to your daily life. <a class="header__subtitle-link" href="#">Learn more →</a></p>
       
       <div class="header__square-pic"></div>
       <!-- +
@@ -154,7 +154,7 @@
             <p class="table__text">Human information storage capacity</p>
           </div>
           <div class="table__cell">
-            <h3 class="table__heading">500 trillion</h4>
+            <h3 class="table__heading">500 trillion</h3>
             <p class="table__text">The number of nerve synapses responsible for learning in an adult human</p>
           </div>
         <!-- +
@@ -327,12 +327,16 @@
        -->
         <h3 class="footer__column-heading">Social media</h3>
         <a href="#" class="footer__column-links">
-          <span class="footer__social-icon"><img src="images/facebook_white.svg"> Facebook</a>   <!-- 
+            <img class="footer__social-icon"
+                 src="images/facebook_white.svg" 
+                 alt=""> Facebook</a>   <!-- + 
             Must be corrected: a social icon should be the part of a link according to the brief,
             it should be clickable
-            -->
+            --> 
         <a href="#" class="footer__column-links"> 
-          <span class="footer__social-icon" ><img src="images/instagram_white.svg"> Instagram</a>
+          <img class="footer__social-icon"
+               src="images/instagram_white.svg" 
+               alt=""> Instagram</a>
       </div>
     </div>
   </footer>
